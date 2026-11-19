@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "nombre": "Polera Oversize Urbana Negra",
+    "descripcion": "Polera 100% algodón peinado de corte holgado, ideal para uso diario.",
+    "precio": 95,
+    "categoria": "Poleras",
+    "stock": 18,
+    "destacado": true,
+    "imagen": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500&q=80"
+  },
+  {
+    "id": 2,
+    "nombre": "Chaqueta Denim Clásica Azul",
+    "descripcion": "Chaqueta de mezclilla resistente con botones metálicos y bolsillos frontales.",
+    "precio": 240,
+    "categoria": "Chaquetas",
+    "stock": 7,
+    "destacado": true,
+    "imagen": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=500&q=80"
+  },
+  {
+    "id": 3,
+    "nombre": "Pantalón Cargo Beige",
+    "descripcion": "Pantalón gabardina con bolsillos laterales amplios y ajuste en tobillo.",
+    "precio": 180,
+    "categoria": "Pantalones",
+    "stock": 12,
+    "destacado": true,
+    "imagen": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=500&q=80"
+  },
+  {
+    "id": 4,
+    "nombre": "Sudadera Hoodie Gris Melange",
+    "descripcion": "Polerón con capucha y bolsillo canguro, interior afelpado térmico.",
+    "precio": 165,
+    "categoria": "Abrigos",
+    "stock": 3,
+    "destacado": true,
+    "imagen": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&q=80"
+  },
+  {
+    "id": 5,
+    "nombre": "Vestido Casual Floral Verano",
+    "descripcion": "Vestido ligero de tela fresca con estampado floral y corte midi.",
+    "precio": 150,
+    "categoria": "Vestidos",
+    "stock": 9,
+    "destacado": false,
+    "imagen": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=500&q=80"
+  },
+  {
+    "id": 6,
+    "nombre": "Camisa Oxford Blanca Formal",
+    "descripcion": "Camisa manga larga de corte slim fit, perfecta para oficina o eventos.",
+    "precio": 140,
+    "categoria": "Camisas",
+    "stock": 0,
+    "destacado": false,
+    "imagen": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500&q=80"
+  },
+  {
+    "id": 7,
+    "nombre": "Jean Skinny Negro Elastizado",
+    "descripcion": "Pantalón mezclilla negra de tiro medio con ajuste cómodo y flexible.",
+    "precio": 175,
+    "categoria": "Pantalones",
+    "stock": 15,
+    "destacado": false,
+    "imagen": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500&q=80"
+  },
+  {
+    "id": 8,
+    "nombre": "Polera Básica Blanca Cuello Redondo",
+    "descripcion": "Prenda esencial de algodón suave transpirable para combinar con todo.",
+    "precio": 75,
+    "categoria": "Poleras",
+    "stock": 25,
+    "destacado": false,
+    "imagen": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&q=80"
+  },
+  {
+    "id": 9,
+    "nombre": "Chaqueta Rompevientos Deportiva",
+    "descripcion": "Chaqueta ligera impermeable ideal para días ventosos o entrenamiento.",
+    "precio": 210,
+    "categoria": "Chaquetas",
+    "stock": 2,
+    "destacado": false,
+    "imagen": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&q=80"
+  },
+  {
+    "id": 10,
+    "nombre": "Gorra Deportiva Bordada JR",
+    "descripcion": "Gorra ajustable de algodón con visera curva y logotipo bordado.",
+    "precio": 60,
+    "categoria": "Accesorios",
+    "stock": 20,
+    "destacado": false,
+    "imagen": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500&q=80"
+  },
+  {
+    "id": 11,
+    "nombre": "Suéter Tejido Cuello Alto",
+    "descripcion": "Chompa de punto suave color arena, abrigadora y elegante.",
+    "precio": 160,
+    "categoria": "Abrigos",
+    "stock": 0,
+    "destacado": false,
+    "imagen": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500&q=80"
+  },
+  {
+    "id": 12,
+    "nombre": "Vestido Elegante Negro Noche",
+    "descripcion": "Vestido entallado de tela sofisticada para ocasiones especiales.",
+    "precio": 260,
+    "categoria": "Vestidos",
+    "stock": 4,
+    "destacado": false,
+    "imagen": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500&q=80"
+  },
+  {
+    "id": 13,
+    "nombre": "Camisa Leñadora a Cuadros Roja",
+    "descripcion": "Camisa franela suave estilo casual con botones frontales.",
+    "precio": 135,
+    "categoria": "Camisas",
+    "stock": 11,
+    "destacado": false,
+    "imagen": "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=500&q=80"
+  },
+  {
+    "id": 14,
+    "nombre": "Cinturón de Cuero Sintético Negro",
+    "descripcion": "Cinturón casual con hebilla metálica mate de alta durabilidad.",
+    "precio": 65,
+    "categoria": "Accesorios",
+    "stock": 3,
+    "destacado": false,
+    "imagen": "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=500&q=80"
+  },
+  {
+    "id": 15,
+    "nombre": "Pantalón Jogger Deportivo Negro",
+    "descripcion": "Pantalón cómodo de algodón con cintura elástica y cordón ajustable.",
+    "precio": 130,
+    "categoria": "Pantalones",
+    "stock": 14,
+    "destacado": false,
+    "imagen": "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=500&q=80"
+  }
+]

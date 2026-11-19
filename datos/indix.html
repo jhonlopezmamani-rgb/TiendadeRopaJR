@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo nav-link" data-seccion="sec-inicio">JR Ropa Online</a>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link activo" data-seccion="sec-inicio">Inicio</a></li>
+                <li><a href="#" class="nav-link" data-seccion="sec-productos">Productos</a></li>
+                <li><a href="#" class="nav-link" data-seccion="sec-nosotros">Nosotros</a></li>
+                <li><a href="#" class="nav-link" data-seccion="sec-contacto">Contacto</a></li>
+                <li><a href="#" class="nav-link" data-seccion="sec-dashboard">Dashboard</a></li>
+                <li><a href="#" class="nav-link" data-seccion="sec-faq">FAQ</a></li>
+                <li><a href="#" class="nav-link" data-seccion="sec-carrito">Carrito <span id="contadorCarrito" class="badge-carrito">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================
+         1. SECCIÓN INICIO (index.html)
+    =========================================== -->
+    <div id="sec-inicio" class="vista-pagina">
+        <section class="banner">
+            <h1>Bienvenido a Tienda de Ropa Online JR</h1>
+            <p>Moda urbana, casual y elegante con envíos a toda Bolivia.</p>
+            <button class="btn nav-link" data-seccion="sec-productos">Explorar Catálogo</button>
+        </section>
+
+        <main class="contenedor">
+            <h2>Tendencias de Moda 2026</h2>
+            <p style="color:#555; margin-bottom:15px;">Descubre los estilos urbanos y de temporada más buscados en JR.</p>
+            <div class="grid-productos" style="margin-bottom: 40px;">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Moda Urbana Streetwear">
+                    <div class="card-body">
+                        <span class="categoria-tag">Streetwear</span>
+                        <h3>Estilo Urbano Oversize</h3>
+                        <p style="font-size:0.9rem; color:#555;">Conjuntos holgados y cómodos para destacar todos los días.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80" alt="Moda Casual Elegante">
+                    <div class="card-body">
+                        <span class="categoria-tag">Temporada</span>
+                        <h3>Casual & Elegante</h3>
+                        <p style="font-size:0.9rem; color:#555;">Prendas versátiles ideales para oficina, salidas y eventos.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80" alt="Colección Algodón Premium">
+                    <div class="card-body">
+                        <span class="categoria-tag">Nueva Colección</span>
+                        <h3>Básicos en Algodón</h3>
+                        <p style="font-size:0.9rem; color:#555;">Colores neutros y cortes modernos fáciles de combinar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Categorías Principales</h2>
+            <div class="categorias-grid">
+                <a href="#" class="cat-box nav-cat" data-cat="Poleras">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=300&q=80" alt="Poleras" style="width:100%; height:110px; object-fit:cover; border-radius:6px; margin-bottom:8px;">
+                    Poleras
+                </a>
+                <a href="#" class="cat-box nav-cat" data-cat="Pantalones">
+                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=300&q=80" alt="Pantalones" style="width:100%; height:110px; object-fit:cover; border-radius:6px; margin-bottom:8px;">
+                    Pantalones
+                </a>
+                <a href="#" class="cat-box nav-cat" data-cat="Chaquetas">
+                    <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=300&q=80" alt="Chaquetas" style="width:100%; height:110px; object-fit:cover; border-radius:6px; margin-bottom:8px;">
+                    Chaquetas
+                </a>
+                <a href="#" class="cat-box nav-cat" data-cat="Abrigos">
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=300&q=80" alt="Abrigos" style="width:100%; height:110px; object-fit:cover; border-radius:6px; margin-bottom:8px;">
+                    Abrigos
+                </a>
+                <a href="#" class="cat-box nav-cat" data-cat="Vestidos">
+                    <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=300&q=80" alt="Vestidos" style="width:100%; height:110px; object-fit:cover; border-radius:6px; margin-bottom:8px;">
+                    Vestidos
+                </a>
+                <a href="#" class="cat-box nav-cat" data-cat="Accesorios">
+                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=300&q=80" alt="Accesorios" style="width:100%; height:110px; object-fit:cover; border-radius:6px; margin-bottom:8px;">
+                    Accesorios
+                </a>
+            </div>
+
+            <h2>Productos Destacados</h2>
+            <div id="contenedorDestacados" class="grid-productos"></div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="btn btn-secundario nav-link" data-seccion="sec-productos">Ver Todos los Productos</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- ==========================================
+         2. SECCIÓN PRODUCTOS (productos.html)
+    =========================================== -->
+    <div id="sec-productos" class="vista-pagina" style="display: none;">
+        <!-- Banner superior del Catálogo -->
+        <section class="banner" style="padding: 50px 20px; background: linear-gradient(rgba(17, 24, 39, 0.78), rgba(17, 24, 39, 0.78)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&q=80') center/cover;">
+            <h1>Catálogo Completo JR 2026</h1>
+            <p>Encuentra prendas exclusivas en stock, filtra por categoría y arma tu outfit ideal.</p>
+        </section>
+
+        <main class="contenedor">
+            <!-- Galería visual de Colecciones del Catálogo -->
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:15px; margin-bottom:25px;">
+                <div style="position:relative; border-radius:10px; overflow:hidden; height:150px;">
+                    <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=500&q=80" alt="Moda Femenina" style="width:100%; height:100%; object-fit:cover;">
+                    <span style="position:absolute; bottom:10px; left:10px; background:rgba(17,24,39,0.85); color:#f59e0b; padding:4px 10px; border-radius:5px; font-weight:bold; font-size:0.85rem;">Colección Mujer</span>
+                </div>
+                <div style="position:relative; border-radius:10px; overflow:hidden; height:150px;">
+                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=500&q=80" alt="Moda Masculina" style="width:100%; height:100%; object-fit:cover;">
+                    <span style="position:absolute; bottom:10px; left:10px; background:rgba(17,24,39,0.85); color:#f59e0b; padding:4px 10px; border-radius:5px; font-weight:bold; font-size:0.85rem;">Colección Hombre</span>
+                </div>
+                <div style="position:relative; border-radius:10px; overflow:hidden; height:150px;">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&q=80" alt="Outfit Urbano" style="width:100%; height:100%; object-fit:cover;">
+                    <span style="position:absolute; bottom:10px; left:10px; background:rgba(17,24,39,0.85); color:#f59e0b; padding:4px 10px; border-radius:5px; font-weight:bold; font-size:0.85rem;">Tendencia Urbana</span>
+                </div>
+                <div style="position:relative; border-radius:10px; overflow:hidden; height:150px;">
+                    <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=500&q=80" alt="Accesorios y Más" style="width:100%; height:100%; object-fit:cover;">
+                    <span style="position:absolute; bottom:10px; left:10px; background:rgba(17,24,39,0.85); color:#f59e0b; padding:4px 10px; border-radius:5px; font-weight:bold; font-size:0.85rem;">Prendas en Oferta</span>
+                </div>
+            </div>
+
+            <div class="filtros-barra">
+                <input type="text" id="buscador" placeholder="Buscar prenda por nombre...">
+                <select id="filtroCategoria">
+                    <option value="todas">Todas las categorías</option>
+                </select>
+                <select id="filtroEstado">
+                    <option value="todos">Todos (Disponibles y Agotados)</option>
+                    <option value="disponible">Solo Disponibles</option>
+                    <option value="agotado">Agotados</option>
+                </select>
+                <select id="ordenPrecio">
+                    <option value="defecto">Ordenar por...</option>
+                    <option value="menor">Precio: Menor a Mayor</option>
+                    <option value="mayor">Precio: Mayor a Menor</option>
+                </select>
+            </div>
+
+            <!-- Aquí se cargan automáticamente los 15 productos desde productos.json con sus imágenes -->
+            <div id="listaProductos" class="grid-productos"></div>
+        </main>
+    </div>
+
+    <!-- Modal Detalle de Producto -->
+    <div id="modalDetalle" class="modal">
+        <div class="modal-contenido">
+            <span id="cerrarModal" class="cerrar-modal">&times;</span>
+            <img id="modalImg" src="" alt="" style="width:100%; height:250px; object-fit:cover; border-radius:8px;">
+            <h2 id="modalNombre" style="margin-top:15px;"></h2>
+            <p id="modalCategoria" class="categoria-tag"></p>
+            <p id="modalDesc" style="margin:10px 0;"></p>
+            <p id="modalPrecio" class="precio"></p>
+            <p id="modalStock"></p><br>
+            <button id="modalBtnAgregar" class="btn" style="width:100%;">Agregar al Carrito</button>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         3. SECCIÓN NOSOTROS (nosotros.html)
+    =========================================== -->
+    <div id="sec-nosotros" class="vista-pagina" style="display: none;">
+        <main class="contenedor">
+            <h1>Sobre Tienda de Ropa Online JR</h1><br>
+            <div class="grid-2 panel-blanco">
+                <div>
+                    <h2>Nuestra Historia</h2>
+                    <p><strong>Tienda de Ropa Online JR</strong> nació con la iniciativa de acercar las últimas tendencias de moda urbana, casual y formal a jóvenes y adultos de Bolivia, combinando calidad en telas, precios accesibles en bolivianos y una experiencia de compra digital rápida y segura.</p><br>
+                    
+                    <h3>Misión</h3>
+                    <p>Ofrecer prendas de vestir modernas y de alta calidad mediante una plataforma digital intuitiva, garantizando satisfacción y estilo en cada compra.</p><br>
+
+                    <h3>Visión</h3>
+                    <p>Consolidarnos como una de las tiendas virtuales de indumentaria referentes a nivel nacional por nuestra innovación, atención personalizada y variedad de catálogo.</p>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:15px;">
+                    <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600&q=80" alt="Tienda JR" style="width:100%; height:220px; object-fit:cover; border-radius:10px;">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80" alt="Moda y Tendencias JR" style="width:100%; height:220px; object-fit:cover; border-radius:10px;">
+                </div>
+            </div>
+
+            <div class="grid-2" style="margin-top:25px;">
+                <div class="panel-blanco">
+                    <h3>Valores Institucionales</h3>
+                    <ul style="margin-left:20px; margin-top:10px;">
+                        <li><strong>Calidad:</strong> Selección rigurosa de materiales y confección.</li>
+                        <li><strong>Compromiso:</strong> Entregas puntuales y atención transparente.</li>
+                        <li><strong>Innovación:</strong> Adaptación constante a las nuevas tendencias y tecnología.</li>
+                        <li><strong>Honestidad:</strong> Precios justos y stock actualizado en tiempo real.</li>
+                    </ul>
+                </div>
+                <div class="panel-blanco">
+                    <h3>Objetivos del Negocio</h3>
+                    <ul style="margin-left:20px; margin-top:10px;">
+                        <li>Ampliar nuestro catálogo trimestralmente con colecciones de temporada.</li>
+                        <li>Brindar herramientas digitales ágiles para consultar disponibilidad sin demoras.</li>
+                        <li>Optimizar la gestión de inventario mediante indicadores estadísticos claros.</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ==========================================
+         4. SECCIÓN CONTACTO (contacto.html)
+    =========================================== -->
+    <div id="sec-contacto" class="vista-pagina" style="display: none;">
+        <main class="contenedor">
+            <h1>Contáctanos</h1><br>
+            <div class="grid-2">
+                <div class="form-box">
+                    <h2>Envíanos un mensaje</h2><br>
+                    <form id="formContacto">
+                        <div class="form-grupo">
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" placeholder="Ej. Juan Pérez">
+                        </div>
+                        <div class="form-grupo">
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" id="correo" placeholder="ejemplo@correo.com">
+                        </div>
+                        <div class="form-grupo">
+                            <label for="celular">Número de celular:</label>
+                            <input type="text" id="celular" placeholder="Ej. 71234567">
+                        </div>
+                        <div class="form-grupo">
+                            <label for="asunto">Asunto:</label>
+                            <input type="text" id="asunto" placeholder="Consulta sobre tallas o envíos">
+                        </div>
+                        <div class="form-grupo">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" rows="4" placeholder="Escribe tu consulta aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width:100%;">Enviar Mensaje</button>
+                    </form>
+                    <p id="respuestaContacto" style="margin-top:15px; font-weight:bold;"></p>
+                </div>
+
+                <div class="panel-blanco">
+                    <h2>Información de la Tienda</h2><br>
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80" alt="Showroom JR" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:15px;">
+                    <p><strong>Dirección:</strong> Calle Bolívar #450, Zona Central, Oruro - Bolivia</p><br>
+                    <p><strong>Teléfono / WhatsApp:</strong> +591 72345678</p><br>
+                    <p><strong>Correo:</strong> ventas@tiendaropajr.com</p><br>
+                    <p><strong>Horario de atención:</strong> Lunes a Sábado de 09:00 a 20:00</p><br>
+                    <h3>Redes Sociales</h3>
+                    <p style="margin-top:10px;">
+                        <a href="#" class="btn btn-secundario">Facebook</a>
+                        <a href="#" class="btn btn-secundario">Instagram</a>
+                        <a href="#" class="btn btn-secundario">TikTok</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ==========================================
+         5. SECCIÓN DASHBOARD (dashboard.html)
+    =========================================== -->
+    <div id="sec-dashboard" class="vista-pagina" style="display: none;">
+        <main class="contenedor">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+                <h1>Dashboard de Inventario - JR</h1>
+                <p id="fechaActualizacion" style="color:#4b5563; font-weight:bold;"></p>
+            </div>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <h3>Total Productos</h3>
+                    <p id="kpiTotal">0</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Categorías</h3>
+                    <p id="kpiCategorias">0</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Valor Inventario</h3>
+                    <p id="kpiValor">0 Bs</p>
+                </div>
+                <div class="kpi-card" style="border-color:#059669;">
+                    <h3>Stock Disponible</h3>
+                    <p id="kpiDisponibles">0</p>
+                </div>
+                <div class="kpi-card" style="border-color:#dc2626;">
+                    <h3>Agotados</h3>
+                    <p id="kpiAgotados">0</p>
+                </div>
+                <div class="kpi-card" style="border-color:#d97706;">
+                    <h3>Bajo Stock (&le; 5)</h3>
+                    <p id="kpiBajoStock">0</p>
+                </div>
+            </div>
+
+            <div class="graficos-grid">
+                <div class="panel-blanco">
+                    <h3>Productos por Categoría</h3>
+                    <canvas id="graficoCategorias"></canvas>
+                </div>
+                <div class="panel-blanco">
+                    <h3>Distribución de Stock</h3>
+                    <canvas id="graficoStock"></canvas>
+                </div>
+            </div>
+
+            <div class="panel-blanco">
+                <h3>Alerta: Productos con Bajo Inventario o Agotados</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Producto</th>
+                            <th>Categoría</th>
+                            <th>Precio (Bs)</th>
+                            <th>Stock Actual</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaBajoStock"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- ==========================================
+         6. SECCIÓN CARRITO (carrito.html)
+    =========================================== -->
+    <div id="sec-carrito" class="vista-pagina" style="display: none;">
+        <main class="contenedor">
+            <h1>Tu Carrito de Compras</h1><br>
+            <div class="panel-blanco">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio Unitario</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaCarrito"></tbody>
+                </table>
+
+                <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
+                    <h2>Total a Pagar: <span id="totalCarrito">0 Bs</span></h2>
+                    <div>
+                        <button id="btnVaciar" class="btn btn-peligro">Vaciar Carrito</button>
+                        <button id="btnFinalizar" class="btn">Finalizar Pedido</button>
+                    </div>
+                </div>
+                <p id="mensajeCompra" style="margin-top:15px; font-weight:bold; color:#059669;"></p>
+            </div>
+        </main>
+    </div>
+
+    <!-- ==========================================
+         7. SECCIÓN FAQ (faq.html)
+    =========================================== -->
+    <div id="sec-faq" class="vista-pagina" style="display: none;">
+        <main class="contenedor">
+            <h1>Preguntas Frecuentes (FAQ)</h1><br>
+
+            <div class="faq-item">
+                <div class="faq-pregunta">¿Realizan envíos a todo el país? <span>+</span></div>
+                <div class="faq-respuesta">Sí, realizamos entregas a domicilio en Oruro y envíos por flota o courier a todos los departamentos de Bolivia en 24 a 48 horas.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-pregunta">¿Cuáles son los métodos de pago aceptados? <span>+</span></div>
+                <div class="faq-respuesta">Aceptamos pagos mediante transferencia bancaria, QR Simple, Tigo Money y pago contra entrega en la ciudad de Oruro.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-pregunta">¿Puedo cambiar una prenda si no me queda la talla? <span>+</span></div>
+                <div class="faq-respuesta">Por supuesto. Tienes hasta 7 días calendario después de recibir tu pedido para solicitar cambio de talla, siempre que la prenda conserve sus etiquetas originales.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-pregunta">¿Cómo sé si una prenda está disponible? <span>+</span></div>
+                <div class="faq-respuesta">En nuestra sección de Productos cada tarjeta indica la cantidad exacta en stock o si la prenda se encuentra agotada temporalmente.</div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tienda de Ropa Online JR - Todos los derechos reservados.</p>
+        <p>Oruro, Bolivia | Atención: Lun - Sáb 09:00 a 20:00</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
